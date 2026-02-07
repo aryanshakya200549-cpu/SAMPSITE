@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #52796F;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #CAD2C5;
+    --color-secondary-foreground: #2F3E46;
+    --color-accent: #D8B4FE;
+    --color-accent-foreground: #4C1D95;
+    --color-muted: #F0F4F8;
+    --color-muted-foreground: #64748B;
+    --color-background: #FAFAF9;
+    --color-foreground: #334155;
+}
+
+/* Custom Utilities using standard CSS syntax to avoid build errors */
+.glass {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(82, 121, 111, 0.1);
+}
+
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #52796F, #354F52);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #354F52;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(82, 121, 111, 0.3);
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
